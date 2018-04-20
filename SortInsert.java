@@ -1,11 +1,11 @@
 public class SortInsert {
     public static void sortInsert(int[] list) {
+        //insert list[i] into a sorted sublist list[0...i-1]
+        // so that list[0..i] is sorted
         for (int i = 1; i < list.length; i++) {
-            //insert list[i] into a sorted sublist list[0...i-1]
-            // so that list[0..i] is sorted
             int curentElement = list[i];
             int j;
-            for (j = i-1; j >= 0 && list[j] > curentElement; j--) {
+            for (j = i - 1; j >= 0 && list[j] > curentElement; j--) {
                 list[j + 1] = list[j];
             }
             //insert the current element into list[j+1]
